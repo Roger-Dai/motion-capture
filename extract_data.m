@@ -1,12 +1,13 @@
-% main_mvnx
+main_mvnx
 output = 'def scan-straight():\n';
 len = size(tree.subject.frames.frame);
 poses = strings(1, len(2) - 3);
 for i = 4:len(2)
     
     temp = tree.subject.frames.frame(i).position(70:72);
-%     temp = temp + [0 0 -0.84];
+%  -----THIS IS THE TRANSLATION MATRIX THAT IS UP TO CHANGE-----
     temp = temp + [0 0 -0.34];
+%  -------------------------------------------------------------
     temp = string(temp);
     xyz = strcat(temp(1),',',temp(2),',',temp(3));
 

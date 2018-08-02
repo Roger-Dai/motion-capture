@@ -1,5 +1,5 @@
 % load data
-tree = load_mvnx('./test7/Tommaso-07-10-rotation-004');
+tree = load_mvnx("REPLACE THIS WITH THE PATH TO THE .MVNX FILE");
 % read some basic data from the file
 mvnxVersion = tree;
 fileComments = tree.subject.comment;
