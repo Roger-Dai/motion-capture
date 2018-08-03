@@ -1,5 +1,5 @@
 main_mvnx
-output = 'def scan-straight():\n';
+output = 'def move():\n';
 len = size(tree.subject.frames.frame);
 poses = strings(1, len(2) - 3);
 for i = 4:len(2)
@@ -26,10 +26,9 @@ end
 
 output = strcat(output,'end\n');
 
-fileID = fopen('./test7/scan--high-l.script','w');
+fileID = fopen('FILEPATH.script','w');
 fprintf(fileID, 'def scan():\n');
 formatSpec = 'movel(p%s, a = 0.3, v = 0.3, r = 0.01)\n';
-% formatSpec = 'servoj(p%s, lookahead_time = 0.1)\n';
 fprintf(fileID, formatSpec, poses);
 fprintf(fileID, 'end\n');
 fclose(fileID);
